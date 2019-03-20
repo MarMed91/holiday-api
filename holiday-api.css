@@ -51,6 +51,6 @@ display: block;
   color: red;
 }
 
-.selected {
+.active {
   display: block;
 }

@@ -1,3 +1,40 @@
+function prevMonth() {
+  var activeMonth = $('.wrapper.active');
+  activeImg.removeClass("active");
+
+  var prevmonth;
+  var prevMonth = activeMonth.prev(".wrapper");
+  if (activeMonth.hasClass("first")) {
+
+   prevMonth = $(".wrapper.last");
+  }
+
+
+
+  prevMonth.addClass("active");
+
+}
+
+function nextMonth() {
+  var activeMonth = $('.wrapper.active');
+  activeMonth.removeClass("active");
+
+  var nextMonth;
+  if (activeMonth.hasClass("last")) {
+
+    nextMonth = $('.wrapper.first');
+  } else {
+
+    nextMonth = activeMonth.next(".wrapper");
+  }
+  nextMonth.addClass("active");
+
+}
+
+
+
+
+
 function getMonthName(month) {
 
   var mom = moment();
@@ -131,6 +168,11 @@ function init() {
   printTitle(year, month);
   printDays(year, month);
   printHolidays(year, month);
+  var arrowLeft = $(".arrow-left");
+  var arrowRight = $(".arrow-right");
+
+  arrowRight.click(nextMonth);
+  arrowLeft.click(prevMonth);
 }
 
 
