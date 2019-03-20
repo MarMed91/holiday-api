@@ -24,9 +24,9 @@ function getHumanDate(year, month, day) {
   mom.month(month);
   mom.date(day);
 
-  var ddate = mom.format("DD MMMM YY")
+  var date = mom.format("DD MMMM YY")
 
-  return ddate;
+  return date;
 
 }
 
@@ -56,6 +56,7 @@ function printDays(year, month) {
 
       var tempDate = {
 
+      machineData : "mmmm",
       date :getHumanDate(year, month, day)
       }
       var liDay = compiled(tempDate);
