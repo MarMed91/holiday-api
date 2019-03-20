@@ -68,7 +68,7 @@ function printDays(year, month) {
 
       var tempDate = {
 
-      machineData : "mmmm",
+      machineDate : getMachineDate(year, month, day),
       date :getHumanDate(year, month, day)
       }
       var liDay = compiled(tempDate);
