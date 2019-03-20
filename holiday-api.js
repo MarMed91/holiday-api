@@ -116,6 +116,7 @@ var holiday;
 
   var selector = "li[data-date='" + holidayMachine + "']"
   var liHoliday = $(selector);
+  console.log(liHoliday);
 
 
   liHoliday.text(liHoliday.text() + " - " + holidayName);

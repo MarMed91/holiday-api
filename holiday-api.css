@@ -21,6 +21,12 @@
 display: flex;
 flex-direction: column;
 align-items: center;
+display: none;
+}
+
+.wrapper.selected {
+
+display: block
 }
 
 .header {
@@ -41,4 +47,8 @@ align-items: center;
 
 .red {
   color: red;
+}
+
+.selected {
+  display: block;
 }
