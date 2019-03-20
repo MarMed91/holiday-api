@@ -63,6 +63,28 @@ function printDays(year, month) {
     }
 }
 
+printHolidays(year, month) {
+
+var outData = {
+  year : year,
+  month: month
+}
+  $.ajax({
+
+    url: "https://flynn.boolean.careers/exercises/api/holidays",
+    data: inData,
+    method : "GET",
+    success : function(date, state) {
+
+    },
+    error: function (date, state, error) {
+      console.log("date" , date);
+      console.log("state" , state);
+      console.log("date" , error);
+    }
+  });
+}
+
 
 
 function init() {
@@ -71,6 +93,7 @@ function init() {
   var month = 0;
   printTitle(year, month);
   printDays(year, month);
+  printHolidays(year, month);
 }
 
 
