@@ -30,6 +30,18 @@ function getHumanDate(year, month, day) {
 
 }
 
+function getMachineDate(year, month, day) {
+  var mom = moment();
+  mom.year(year);
+  mom.month(month);
+  mom.date(day);
+
+  var date = mom.format("YYYY MM DD")
+
+  return date;
+
+}
+
 
 
 function printTitle(year, month) {
