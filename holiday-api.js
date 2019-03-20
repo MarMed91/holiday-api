@@ -18,6 +18,14 @@ function getMonthDayCount(year, month) {
   return daysCount;
 }
 
+function getHumanDate(year, month, day) {
+  var mom = moment();
+  mom.year(year);
+  mom.month(month);
+  mom.date(day);
+
+}
+
 
 
 function printTitle(year, month) {
@@ -42,7 +50,7 @@ function printDays(year, month) {
   mom.year(year);
 
     for (var day = 1; i <= daysCount; day++) {
-      array[i]
+
     }
 }
 
