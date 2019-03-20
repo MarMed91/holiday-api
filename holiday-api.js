@@ -107,8 +107,16 @@ var outData = {
 }
 
 function addHolidayHighlight(holidays) {
+var holiday;
+  for (var i = 0; i < holidays.length; i++) {
 
+   holiday = holidays[i];
+  var holidayMachine = holiday.date
+  var holidayName = holiday.name
 
+  var selector = "li[data-date='" + holidayMachine + "']"
+  console.log(selector);
+  }
 }
 
 function init() {
