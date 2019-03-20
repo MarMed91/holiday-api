@@ -115,7 +115,11 @@ var holiday;
   var holidayName = holiday.name
 
   var selector = "li[data-date='" + holidayMachine + "']"
-  console.log(selector);
+  var liHoliday = $(selector);
+
+
+  liHoliday.text(liHoliday.text() + " - " + holidayName);
+  liHoliday.addClass("red");
   }
 }
 
