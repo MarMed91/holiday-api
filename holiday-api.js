@@ -24,6 +24,10 @@ function getHumanDate(year, month, day) {
   mom.month(month);
   mom.date(day);
 
+  var ddate = mom.format("DD MM YY")
+
+  return ddate;
+
 }
 
 
