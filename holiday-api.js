@@ -46,18 +46,19 @@ function printDays(year, month) {
   var daysCount = getMonthDayCount(year, month);
   var ulListDay = $("ul#listDay");
 
-  var template = $("#day-template");
+  var template = $("#day-template").html();
   var compiled = Handlebars.compile(template);
 
 
 
-    for (var day = 1; i <= daysCount; day++) {
-    mom.date(day);
+    for (var day = 1; day <= daysCount; day++) {
+    
 
       var tempDate = {
 
       date :getHumanDate(year, month, day)
       }
+      var liDay = compiled(tempDate);
     }
 }
 
