@@ -49,12 +49,15 @@ function printDays(year, month) {
   var template = $("#day-template");
   var compiled = Handlebars.compile(template);
 
-  var mom = moment();
-  mom.month(month);
-  mom.year(year);
+
 
     for (var day = 1; i <= daysCount; day++) {
+    mom.date(day);
 
+      var tempDate = {
+
+      date :getHumanDate(year, month, day)
+      }
     }
 }
 
