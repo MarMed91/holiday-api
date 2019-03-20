@@ -79,7 +79,7 @@ var outData = {
       if (inData.success == true) {
 
           var holidays = inData.response;
-          console.log(holidays);
+          addHolidayHighlight(holidays);
       } else {
 
         console.log("Communication error");
@@ -93,7 +93,10 @@ var outData = {
   });
 }
 
+function addHolidayHighlight(holidays) {
 
+
+}
 
 function init() {
 
