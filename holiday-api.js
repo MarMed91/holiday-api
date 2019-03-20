@@ -1,6 +1,6 @@
 function prevMonth() {
   var activeMonth = $('.wrapper.active');
-  activeImg.removeClass("active");
+  activeMonth.removeClass("active");
 
   var prevmonth;
   var prevMonth = activeMonth.prev(".wrapper");
@@ -168,8 +168,9 @@ function init() {
   printTitle(year, month);
   printDays(year, month);
   printHolidays(year, month);
-  var arrowLeft = $(".arrow-left");
-  var arrowRight = $(".arrow-right");
+  var arrowRight = $("div.arrow-right > .fa-arrow-right");
+  var arrowLeft = $("div.arrow-left > .fa-arrow-left");
+
 
   arrowRight.click(nextMonth);
   arrowLeft.click(prevMonth);
