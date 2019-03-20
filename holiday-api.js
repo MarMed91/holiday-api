@@ -29,6 +29,19 @@ h1.text(monthName + " : " + " 1-" + daysCount);
 
 }
 
+function printDays(year, month) {
+
+  var daysCount = getMonthDayCount(year, month);
+  var ulListDay = $("ul#listDay");
+
+  var template = $("#day-template");
+  var compiled = Handlebars.compile(template);
+
+    for (var day = 1; i <= daysCount; day++) {
+      array[i]
+    }
+}
+
 
 
 function init() {
