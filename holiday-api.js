@@ -181,13 +181,20 @@ function init() {
 
 
   arrowRight.click(function() {
+    if (month < 11) {
 
-    month = nextMonth(year, month);
+      month = nextMonth(year, month);
+    }
+
+
   });
 
   arrowLeft.click(function() {
+    if (month > 0) {
 
     month = prevMonth(year, month);
+    }
+    
   });
 }
 
