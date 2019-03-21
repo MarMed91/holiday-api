@@ -1,33 +1,24 @@
-function prevMonth() {
-  var activeMonth = $('.wrapper.active');
-  activeMonth.removeClass("active");
+function prevMonth(year, month) {
 
-  var prevMonth;
-  var prevMonth = activeMonth.prev(".wrapper");
-  if (activeMonth.hasClass("first")) {
+  month--;
 
-   prevMonth = $(".wrapper.last");
-  }
+  printTitle(year, month);
+  printDays(year, month);
+  printHolidays(year, month);
 
-
-
-  prevMonth.addClass("active");
+  return month;
 
 }
 
-function nextMonth() {
-  var activeMonth = $('.wrapper.active');
-  activeMonth.removeClass("active");
+function nextMonth(year, month) {
 
-  var nextMonth;
-  if (activeMonth.hasClass("last")) {
+  month++;
 
-    nextMonth = $('.wrapper.first');
-  } else {
+  printTitle(year, month);
+  printDays(year, month);
+  printHolidays(year, month);
 
-    nextMonth = activeMonth.next(".wrapper");
-  }
-  nextMonth.addClass("active");
+  return month;
 
 }
 
@@ -61,7 +52,7 @@ function getHumanDate(year, month, day) {
   mom.month(month);
   mom.date(day);
 
-  var date = mom.format("DD MMMM YY")
+  var date = mom.format("DD MMMM YYYY")
 
   return date;
 
@@ -73,7 +64,7 @@ function getMachineDate(year, month, day) {
   mom.month(month);
   mom.date(day);
 
-  var date = mom.format("YYYY MM DD")
+  var date = mom.format("YYYY MMMM DD")
 
   return date;
 
@@ -148,12 +139,13 @@ var holiday;
   for (var i = 0; i < holidays.length; i++) {
 
    holiday = holidays[i];
-  var holidayMachine = holiday.date
-  var holidayName = holiday.name
+  var holidayMachine = holiday.date;
+  var holidayName = holiday.name;
 
   var selector = "li[data-date='" + holidayMachine + "']"
   var liHoliday = $(selector);
-  console.log(liHoliday);
+
+
 
 
   liHoliday.text(liHoliday.text() + " - " + holidayName);
@@ -172,8 +164,15 @@ function init() {
   var arrowLeft = $("div.arrow-left > .fa-arrow-left");
 
 
-  arrowRight.click(nextMonth);
-  arrowLeft.click(prevMonth);
+  arrowRight.click(function() {
+
+    mese = nextMonth(year, month);
+  });
+
+  arrowLeft.click(function() {
+
+    mese = nextMonth(year, month);
+  });
 }
 
 
