@@ -70,7 +70,7 @@ function getMachineDate(year, month, day) {
   mom.month(month);
   mom.date(day);
 
-  var date = mom.format("YYYY MM DD")
+  var date = mom.format("YYYY-MM-DD")
 
   return date;
 
@@ -153,11 +153,12 @@ function printAll() {
 
 function addHolidayHighlight(holidays) {
   var holiday;
+  console.log(holidays);
   for (var i = 0; i < holidays.length; i++) {
     holiday = holidays[i];
     var holidayMachine = holiday.date;
     var holidayName = holiday.name;
-
+console.log(holidayMachine);
     var selector = "li[data-date='" + holidayMachine + "']"
     var liHoliday = $(selector);
 
