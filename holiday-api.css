@@ -8,12 +8,20 @@
 .container {
 
   width: 100vw;
-  height: 160vh;
+  height: 150vh;
 
   background: rgb(76, 72, 72);
   display: flex;
   justify-content: center;
   color: white;
+}
+
+.header {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .wrapper {

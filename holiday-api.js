@@ -80,11 +80,11 @@ function getMachineDate(year, month, day) {
 
 function printTitle(year, month) {
 
-var h1 = $("#month-name");
-var monthName = getMonthName(month);
-var daysCount = getMonthDayCount(year, month);
-console.log(h1);
-h1.text(monthName + " : " + " 1-" + daysCount);
+  var h1 = $("#month-name");
+  var monthName = getMonthName(month);
+  var daysCount = getMonthDayCount(year, month);
+  console.log(h1);
+  h1.text(monthName + " : " + " 1-" + daysCount);
 
 }
 
@@ -113,10 +113,10 @@ function printDays(year, month) {
 
 function printHolidays(year, month) {
 
-var outData = {
-  year : year,
-  month: month
-}
+  var outData = {
+    year : year,
+    month: month
+  }
   $.ajax({
 
     url: "https://flynn.boolean.careers/exercises/api/holidays",
@@ -170,9 +170,11 @@ function init() {
 
   var year = 2018;
   var month = 0;
+
   printTitle(year, month);
   printDays(year, month);
   printHolidays(year, month);
+
   var arrowRight = $(".fa-arrow-right");
   var arrowLeft = $(".fa-arrow-left");
 
