@@ -5,7 +5,6 @@ function prevMonth(year,month) {
   printTitle(year, month);
   printDays(year, month);
   printHolidays(year, month);
-  PrintAll();
 
   return month;
 
@@ -18,9 +17,8 @@ function nextMonth(year,month) {
   printTitle(year, month);
   printDays(year, month);
   printHolidays(year, month);
-  PrintAll();
 
-console.log(month);
+
   return month;
 
 }
@@ -35,8 +33,9 @@ function getMonthName(month) {
   mom.month(month);
 
   var monthName = mom.format("MMMM")
+
   return monthName;
-  console.log(monthName);
+
 }
 
 
@@ -80,6 +79,7 @@ function printTitle(year, month) {
 var h1 = $("#month-name");
 var monthName = getMonthName(month);
 var daysCount = getMonthDayCount(year, month);
+console.log(h1);
 h1.text(monthName + " : " + " 1-" + daysCount);
 
 }
@@ -87,7 +87,7 @@ h1.text(monthName + " : " + " 1-" + daysCount);
 function printDays(year, month) {
 
   var daysCount = getMonthDayCount(year, month);
-  var ulListDay = $("ul#listDay");
+  var ulListDay = $(".days-container");
 
   var template = $("#day-template").html();
   var compiled = Handlebars.compile(template);
@@ -120,7 +120,7 @@ var outData = {
     method : "GET",
     success : function(inData, state) {
 
-      if (inData.success == true) {
+      if (inData.success) {
 
           var holidays = inData.response;
           addHolidayHighlight(holidays);
@@ -137,33 +137,19 @@ var outData = {
   });
 }
 
-function PrintAll() {
-
-  var h1 = $("h1");
-  h1.text("");
-
-  var li = $("li");
-  li.remove();
-}
-
-
 
 function addHolidayHighlight(holidays) {
-var holiday;
+  var holiday;
   for (var i = 0; i < holidays.length; i++) {
+    holiday = holidays[i];
+    var holidayMachine = holiday.date;
+    var holidayName = holiday.name;
 
-   holiday = holidays[i];
-  var holidayMachine = holiday.date;
-  var holidayName = holiday.name;
+    var selector = "li[data-date='" + holidayMachine + "']"
+    var liHoliday = $(selector);
 
-  var selector = "li[data-date='" + holidayMachine + "']"
-  var liHoliday = $(selector);
-
-
-
-liHoliday.addClass("red");
-  liHoliday.text(liHoliday.text() + " - " + holidayName);
-
+    liHoliday.addClass("red");
+    liHoliday.text(liHoliday.text() + " - " + holidayName);
   }
 }
 
@@ -180,12 +166,12 @@ function init() {
 
   arrowRight.click(function() {
 
-    mese = nextMonth(year, month);
+    month = nextMonth(year, month);
   });
 
   arrowLeft.click(function() {
 
-    mese = prevMonth(year, month);
+    month = prevMonth(year, month);
   });
 }
 
