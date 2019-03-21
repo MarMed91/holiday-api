@@ -13,7 +13,8 @@
 
   display: flex;
   justify-content: center;
-  height: 100vh;
+
+  height: 210vh;
 }
 
 .header {
@@ -43,19 +44,18 @@
 
 .header {
 
-  padding-top: 25px;
-  height: 20%;
+  height: 100px;
 }
 
 .days-container{
   width: 80%;
-  margin-top: 150px;
+  margin-top: 20px;
   font-size: 18px;
   display: flex;
   align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  flex-basis: calc(100% / 7);
+  flex-direction: column;
+
+
 }
 
 .days-container div{
@@ -65,10 +65,8 @@
 
  li{
   list-style: none;
-  color: black;
-  padding: 25px;
-  border: 1px solid black;
-  background: white;
+  margin: 10px;
+
 
 }
 
