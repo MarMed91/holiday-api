@@ -2,7 +2,7 @@ function prevMonth() {
   var activeMonth = $('.wrapper.active');
   activeMonth.removeClass("active");
 
-  var prevmonth;
+  var prevMonth;
   var prevMonth = activeMonth.prev(".wrapper");
   if (activeMonth.hasClass("first")) {
 
