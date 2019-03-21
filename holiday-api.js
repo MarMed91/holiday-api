@@ -58,7 +58,7 @@ function getHumanDate(year, month, day) {
   mom.month(month);
   mom.date(day);
 
-  var date = mom.format("DD MMMM YY")
+  var date = mom.format("DD ddd")
 
   return date;
 
@@ -84,7 +84,7 @@ function printTitle(year, month) {
   var monthName = getMonthName(month);
   var daysCount = getMonthDayCount(year, month);
   console.log(h1);
-  h1.text(monthName + " : " + " 1-" + daysCount);
+  h1.text(monthName + "  " + year);
 
 }
 
