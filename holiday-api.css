@@ -8,12 +8,11 @@
 .container {
 
   width: 100vw;
-
-
   background: rgb(76, 72, 72);
+  color: white;
+
   display: flex;
   justify-content: center;
-  color: white;
 }
 
 .header {
@@ -23,6 +22,7 @@
   justify-content: space-between;
   align-items: center;
 }
+
 .header div {
 
   margin: 20px;
@@ -54,15 +54,19 @@
   font-size: 18px;
   display: flex;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
+
 .days-container div{
   margin: auto;
+
 }
 
  li{
   list-style: none;
-  padding-bottom: 20px; 
+  padding-bottom: 20px;
+  margin-right: 50px;
 }
 
 li[data-date="2018-01-01"],
