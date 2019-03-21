@@ -8,7 +8,7 @@
 .container {
 
   width: 100vw;
-  background: rgb(76, 72, 72);
+
   color: white;
 
   display: flex;
@@ -23,6 +23,8 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  width: 983px;
+  color: black;
 }
 
 .header div {
@@ -36,7 +38,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  width: 80%;
+  width: 85%;
 }
 
 
@@ -50,22 +52,25 @@
 
 .days-container{
 
-  width: 80%;
+  width: 100%;
   margin-top: 20px;
   font-size: 18px;
   display: flex;
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
-  border: 1px solid black;
+  border: 2px solid black;
 }
 
 td {
 
   width: calc(100% / 7);
+  border: 1px solid rgb(233, 233, 233);
+  background: white;
+  color: black;
 }
 
-.days-container div{
+.days-container tr{
   margin: auto;
 
 }
@@ -73,8 +78,7 @@ td {
  li{
   list-style: none;
   margin: 10px;
-
-
+  padding:20px 30px;
 }
 
 li[data-date="2018-01-01"],
