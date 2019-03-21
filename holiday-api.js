@@ -2,9 +2,11 @@ function prevMonth(year,month) {
 
   month--;
 
+  printAll();
   printTitle(year, month);
   printDays(year, month);
   printHolidays(year, month);
+
 
   return month;
 
@@ -14,9 +16,11 @@ function nextMonth(year,month) {
 
   month++;
 
+  printAll();
   printTitle(year, month);
   printDays(year, month);
   printHolidays(year, month);
+
 
 
   return month;
@@ -135,6 +139,15 @@ var outData = {
       console.log("date" , error);
     }
   });
+}
+
+function printAll() {
+
+  var h1 = $("h1");
+  h1.text("");
+
+  var li = $("li");
+  li.remove();
 }
 
 
