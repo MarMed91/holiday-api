@@ -1,23 +1,26 @@
-function prevMonth(year, month) {
+function prevMonth(year,month) {
 
   month--;
 
   printTitle(year, month);
   printDays(year, month);
   printHolidays(year, month);
+  PrintAll();
 
   return month;
 
 }
 
-function nextMonth(year, month) {
+function nextMonth(year,month) {
 
   month++;
 
   printTitle(year, month);
   printDays(year, month);
   printHolidays(year, month);
+  PrintAll();
 
+console.log(month);
   return month;
 
 }
@@ -52,7 +55,7 @@ function getHumanDate(year, month, day) {
   mom.month(month);
   mom.date(day);
 
-  var date = mom.format("DD MMMM YYYY")
+  var date = mom.format("DD MMMM YY")
 
   return date;
 
@@ -64,7 +67,7 @@ function getMachineDate(year, month, day) {
   mom.month(month);
   mom.date(day);
 
-  var date = mom.format("YYYY MMMM DD")
+  var date = mom.format("YYYY MM DD")
 
   return date;
 
@@ -134,6 +137,17 @@ var outData = {
   });
 }
 
+function PrintAll() {
+
+  var h1 = $("h1");
+  h1.text("");
+
+  var li = $("li");
+  li.remove();
+}
+
+
+
 function addHolidayHighlight(holidays) {
 var holiday;
   for (var i = 0; i < holidays.length; i++) {
@@ -147,9 +161,9 @@ var holiday;
 
 
 
-
+liHoliday.addClass("red");
   liHoliday.text(liHoliday.text() + " - " + holidayName);
-  liHoliday.addClass("red");
+
   }
 }
 
@@ -160,8 +174,8 @@ function init() {
   printTitle(year, month);
   printDays(year, month);
   printHolidays(year, month);
-  var arrowRight = $("div.arrow-right > .fa-arrow-right");
-  var arrowLeft = $("div.arrow-left > .fa-arrow-left");
+  var arrowRight = $(".fa-arrow-right");
+  var arrowLeft = $(".fa-arrow-left");
 
 
   arrowRight.click(function() {
@@ -171,7 +185,7 @@ function init() {
 
   arrowLeft.click(function() {
 
-    mese = nextMonth(year, month);
+    mese = prevMonth(year, month);
   });
 }
 
