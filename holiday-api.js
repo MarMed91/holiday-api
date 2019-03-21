@@ -194,7 +194,7 @@ function init() {
 
     month = prevMonth(year, month);
     }
-    
+
   });
 }
 

@@ -6,7 +6,9 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <script id="day-template" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js" charset="utf-8" type="text/javascript">
-      <li data-date="{{ machineDate }}">{{ date }}</li>
+      <td>
+          <li data-date="{{ machineDate }}">{{ date }}</li>
+      </td>
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <link rel="stylesheet" href="holiday-api.css">
@@ -15,23 +17,23 @@
   </head>
   <body>
        <div class="container">
+               <div class="wrapper">
+                 <div class="header">
+                        <div class="arrow-left">
+                             <i class="fas fa-arrow-left"></i>
+                        </div>
+                        <h1 id="month-name"></h1>
+                        <div class="arrow-right">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                 </div>
+                 <table class="days-container">
+                     <tr id="listDay"></tr>
+                 </table>
+             </div>
+          </table>
 
-           <div class="wrapper">
-               <div class="header">
-                   <div class="arrow-left">
-                       <i class="fas fa-arrow-left"></i>
-                   </div>
-                   <h1 id="month-name"></h1>
-                   <div class="arrow-right">
-                       <i class="fas fa-arrow-right"></i>
-                   </div>
-               </div>
-               <div class="days-container">
-                   <ul id="listDay"></ul>
-               </div>
-           </div>
 
 
-       </div>
   </body>
 </html>
