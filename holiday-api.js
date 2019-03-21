@@ -53,6 +53,7 @@ function getMonthDayCount(year, month) {
 }
 
 function getHumanDate(year, month, day) {
+
   var mom = moment();
   mom.year(year);
   mom.month(month);
@@ -65,6 +66,7 @@ function getHumanDate(year, month, day) {
 }
 
 function getMachineDate(year, month, day) {
+
   var mom = moment();
   mom.year(year);
   mom.month(month);
@@ -152,19 +154,21 @@ function printAll() {
 
 
 function addHolidayHighlight(holidays) {
+
   var holiday;
-  console.log(holidays);
+
   for (var i = 0; i < holidays.length; i++) {
     holiday = holidays[i];
     var holidayMachine = holiday.date;
     var holidayName = holiday.name;
-console.log(holidayMachine);
+
     var selector = "li[data-date='" + holidayMachine + "']"
     var liHoliday = $(selector);
 
     liHoliday.addClass("red");
     liHoliday.text(liHoliday.text() + " - " + holidayName);
   }
+;
 }
 
 function init() {

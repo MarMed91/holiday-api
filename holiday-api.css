@@ -65,8 +65,7 @@
 td {
 
   width: calc(100% / 7);
-  height: 104px;
-
+  
   border: 1px solid rgb(233, 233, 233);
   background: white;
   color: black;
