@@ -180,11 +180,11 @@ function init() {
   printDays(year, month);
   printHolidays(year, month);
 
-  var arrowRight = $(".fa-arrow-right");
-  var arrowLeft = $(".fa-arrow-left");
+  var buttonRight = $("input#button-right");
+  var buttonLeft = $("input#button-left");
 
 
-  arrowRight.click(function() {
+  buttonRight.click(function() {
     if (month < 11) {
 
       month = nextMonth(year, month);
@@ -193,7 +193,7 @@ function init() {
 
   });
 
-  arrowLeft.click(function() {
+  buttonLeft.click(function() {
     if (month > 0) {
 
     month = prevMonth(year, month);
