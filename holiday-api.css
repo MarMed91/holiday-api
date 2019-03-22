@@ -65,6 +65,7 @@
 td {
 
   width: calc(100% / 7);
+  height: 100px;
 
   border: 1px solid rgb(233, 233, 233);
   background: white;
@@ -96,6 +97,8 @@ td li.red {
 
   background: rgb(247, 238, 256);
   color: red;
+  font-size: 12px;
+
 }
 
 
@@ -119,4 +122,9 @@ input#button-left:hover, input#button-right:hover {
 
   color: white;
   background: black;
+}
+
+tbody {
+
+  margin: 0;
 }

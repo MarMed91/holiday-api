@@ -148,7 +148,7 @@ function printAll() {
   var h1 = $("h1");
   h1.text("");
 
-  var li = $("li");
+  var li = $("td  li");
   li.remove();
 }
 
