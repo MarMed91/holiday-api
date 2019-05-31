@@ -8,21 +8,21 @@
 .container {
 
   width: 100vw;
-
+  height: 100%;
   color: white;
 
   display: flex;
   justify-content: center;
-
-  height: 100%;
 }
 
 .header {
 
   display: flex;
   flex-direction: row;
+
   justify-content: space-between;
   align-items: center;
+
   width: 983px;
   color: black;
 }
@@ -36,14 +36,11 @@
 
   display: flex;
   flex-direction: column;
+
   align-items: center;
   justify-content: flex-start;
   width: 85%;
 }
-
-
-
-
 
 .header {
 
@@ -55,11 +52,12 @@
   width: 100%;
   margin-top: 20px;
   font-size: 18px;
+  border: 2px solid black;
+
   display: flex;
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
-  border: 2px solid black;
 }
 
 td {
@@ -91,16 +89,12 @@ li[data-date="2018-01-06"], {
   color: red;
 }
 
-
-
 td li.red {
 
   background: rgb(247, 238, 256);
   color: red;
   font-size: 12px;
-
 }
-
 
 footer {
 
